@@ -5,10 +5,7 @@ let buildPath = 'public/build/'
 mix
   .setPublicPath('public')
   .js('src/js/app.js', buildPath + 'js/')
-  .postCss('src/css/style.css', buildPath + 'css/', [
-    require('postcss-easy-import'),
-    require('precss')
-  ])
+  .postCss('src/css/style.css', buildPath + 'css/', [require('postcss-easy-import'), require('precss')])
   .browserSync({
     proxy: false,
     server: './public',
